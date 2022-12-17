@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">dagbook</string>
+    <string name="ingresar">ingresar</string>
+    <string name="register">registrarse</string>
+    <string name="user">usuario</string>
+    <string name="password">contraseña</string>
+    <string name="contentDescription">IsOnlyALogo</string>
+    <string name="saludo">Hola!! Bienvenido</string>
+</resources>
