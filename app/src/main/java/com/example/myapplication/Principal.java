@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -16,22 +17,24 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
 
 public class Principal extends AppCompatActivity {
 
-    TextView userPass,name;
+    TextView userPass, name;
     ImageButton btnTask;
     ImageButton btnContac;
     GoogleSignInOptions gso;
     GoogleSignInClient gsc;
+    Button signOutbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
 
-       userPass =findViewById(R.id.userpass_txt);
-       String user =getIntent().getStringExtra("username");
+        userPass = findViewById(R.id.userpass_txt);
+        String user = getIntent().getStringExtra("username");
         userPass.setText(user);
 
         btnTask = findViewById(R.id.btn_task);
@@ -52,20 +55,35 @@ public class Principal extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-         /*recibo datos google*/
+        /*recibo datos google*/
         name = findViewById(R.id.userpass_txt);
+        signOutbtn = findViewById(R.id.signout);
+
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
         gsc = GoogleSignIn.getClient(this, gso);
 
         GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
 
-        if(acct != null){
+        if (acct != null) {
             String personName = acct.getDisplayName();
             name.setText(personName);
         }
 
-
-
+        signOutbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                signOut();
+            }
+        });
+    }
+    void signOut(){
+        gsc.signOut().addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(com.google.android.gms.tasks.Task<Void> task) {
+               finish();
+               startActivity(new Intent(Principal.this, MainActivity.class));
+            }
+        });
     }
 
 }

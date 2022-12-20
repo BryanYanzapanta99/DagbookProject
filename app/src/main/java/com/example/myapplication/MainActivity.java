@@ -86,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
                 Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
                 try{
                     task.getResult(ApiException.class);
+                    navigateToSecondActivity();
                 }catch (ApiException e){
                     Toast.makeText(getApplicationContext(), "Algo ha ocurrido",Toast.LENGTH_SHORT).show();
                 }
@@ -93,8 +94,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
             void navigateToSecondActivity(){
+                finish();
             Intent intent = new Intent(MainActivity.this, Principal.class);
             startActivity(intent);
+
             }
 
      /*
