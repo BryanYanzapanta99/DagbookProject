@@ -30,7 +30,7 @@ public class Contacts extends AppCompatActivity implements View.OnClickListener,
         btnAgregar = findViewById(R.id.btnAgregar);
         btnAgregar.setOnClickListener(this);
         mListView = findViewById(R.id.listView);
-        mListView.setOnClickListener(this);
+       // mListView.setOnClickListener(this);
         mEditText = findViewById(R.id.etLista);
 
 
