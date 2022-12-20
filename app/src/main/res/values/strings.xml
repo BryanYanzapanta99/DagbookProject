@@ -1,14 +1,14 @@
 <resources>
-    <string name="app_name">dagbook</string>
+    <string name="app_name">Dagbook</string>
     <string name="ingresar">Login</string>
     <string name="signout">Sign Out</string>
 
-    <string name="register">registrarse</string>
+    <string name="register">Registrarse</string>
     <string name="user">Username</string>
     <string name="password">Password</string>
     <string name="contentDescription">Image</string>
-    <string name="saludo">Hola!! Bienvenido</string>
-    <string name="forgot">forgot password?</string>
+    <string name="saludo">Bienvenido</string>
+    <string name="forgot">Forgot password?</string>
     <string name="or_sign">Or sign in with</string>
 
 

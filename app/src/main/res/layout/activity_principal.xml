@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1B00BCD4"
     tools:context=".Principal">
 
     <GridLayout
@@ -51,50 +50,53 @@
             android:text="@string/signout"
             android:textSize="10sp"
             android:textStyle="italic" />
+
         <ImageButton
 
             android:id="@+id/btn_task"
-            android:layout_gravity="fill"
-            android:layout_columnWeight="1"
+            android:layout_height="wrap_content"
             android:layout_rowWeight="1"
-            android:background="#ffffff"
-            app:srcCompat="@drawable/_486504338_check_check_marks_list_checklist_documents_todo_list_81298"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_margin="5sp"
+            android:background="#ffffff"
 
-            />
+            app:srcCompat="@drawable/_486504338_check_check_marks_list_checklist_documents_todo_list_81298" />
+
         <ImageButton
             android:id="@+id/btn_contact"
-            android:layout_gravity="fill"
-            android:layout_columnWeight="1"
+            android:layout_height="102dp"
             android:layout_rowWeight="1"
-            android:background="#ffffff"
-            app:srcCompat="@drawable/blue_users_customers_clients_people_12438"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_margin="5sp"
+            android:background="#ffffff"
 
-            />
+            app:srcCompat="@drawable/blue_users_customers_clients_people_12438" />
 
         <ImageButton
             android:id="@+id/btn_dibujo"
-            android:layout_gravity="fill"
-            android:layout_columnWeight="1"
+            android:layout_height="104dp"
             android:layout_rowWeight="1"
-            android:background="#ffffff"
-            app:srcCompat="@drawable/dibujo"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_margin="5sp"
+            android:background="#ffffff"
 
-            />
+            app:srcCompat="@drawable/dibujo" />
+
         <ImageButton
             android:id="@+id/calendar"
-            android:layout_gravity="fill"
-            android:layout_columnWeight="1"
+            android:layout_height="113dp"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_margin="5sp"
             android:background="#ffffff"
             android:text="button2"
             android:textSize="18sp"
-            app:srcCompat="@drawable/calendarlist_1032"
-            android:layout_margin="5sp"
 
-            />
+            app:srcCompat="@drawable/calendarlist_1032" />
 
 
 
