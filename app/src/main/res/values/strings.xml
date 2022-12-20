@@ -1,9 +1,15 @@
 <resources>
     <string name="app_name">dagbook</string>
-    <string name="ingresar">ingresar</string>
+    <string name="ingresar">Login</string>
+    <string name="signout">Sign Out</string>
+
     <string name="register">registrarse</string>
-    <string name="user">usuario</string>
-    <string name="password">contraseña</string>
-    <string name="contentDescription">IsOnlyALogo</string>
+    <string name="user">Username</string>
+    <string name="password">Password</string>
+    <string name="contentDescription">Image</string>
     <string name="saludo">Hola!! Bienvenido</string>
+    <string name="forgot">forgot password?</string>
+    <string name="or_sign">Or sign in with</string>
+
+
 </resources>
