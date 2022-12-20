@@ -7,92 +7,99 @@
     android:background="#1B00BCD4"
     tools:context=".Principal">
 
-
-    <TextView
-        android:id="@+id/textView"
+    <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="5dp"
-        android:text="@string/saludo"
-        android:textColor="#79CCD6"
-        android:textSize="32sp"
-        android:textStyle="italic"
-        android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/userpass_txt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10sp"
+        android:rowCount="4"
+        android:columnCount="1"
 
-        />
+        >
 
-    <TextView
-        android:id="@+id/userpass_txt"
-        android:layout_width="match_parent"
-        android:layout_height="53dp"
-        android:layout_columnSpan="4"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="32dp"
-        android:text="@string/user"
-        android:textColor="#79CCD6"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="2sp"
+            android:gravity="center"
+            android:text="@string/saludo"
+            android:textColor="#79CCD6"
+            android:textSize="30sp"
+            android:textStyle="italic" />
 
-    <ImageButton
-        android:contentDescription="@string/contentDescription"
-        android:id="@+id/btn_task"
-        android:layout_width="299dp"
-        android:layout_height="131dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginBottom="52dp"
-        android:backgroundTint="#00FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/btn_contact"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userpass_txt"
-        app:srcCompat="@drawable/_486504338_check_check_marks_list_checklist_documents_todo_list_81298" />
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5sp"
+            android:gravity="center"
+            android:text="@string/user"
+            android:textColor="#79CCD6"
 
-    <ImageButton
-        android:contentDescription="@string/contentDescription"
-        tools:ignore="ContentDescription"
-        android:id="@+id/btn_contact"
-        android:layout_width="match_parent"
-        android:layout_height="126dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="197dp"
-        android:backgroundTint="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_task"
-        app:srcCompat="@drawable/blue_users_customers_clients_people_12438" />
+            android:textSize="25sp"
+            android:textStyle="italic" />
 
-    <Button
-        android:id="@+id/signout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="158dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="159dp"
-        android:layout_marginBottom="45dp"
-        android:backgroundTint="#00BCD4"
-        android:text="@string/signout"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_contact"
-        app:layout_constraintVertical_bias="0.0" />
+        <Button
+            android:id="@+id/signout"
+            android:layout_height="33dp"
+            android:layout_gravity="center"
+            android:layout_margin="5sp"
+            android:backgroundTint="#00BCD4"
+            android:gravity="left"
+            android:text="@string/signout"
+            android:textSize="10sp"
+            android:textStyle="italic" />
+        <ImageButton
+
+            android:id="@+id/btn_task"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#ffffff"
+            app:srcCompat="@drawable/_486504338_check_check_marks_list_checklist_documents_todo_list_81298"
+            android:layout_margin="5sp"
+
+            />
+        <ImageButton
+            android:id="@+id/btn_contact"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#ffffff"
+            app:srcCompat="@drawable/blue_users_customers_clients_people_12438"
+            android:layout_margin="5sp"
+
+            />
+
+        <ImageButton
+            android:id="@+id/btn_dibujo"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#ffffff"
+            app:srcCompat="@drawable/dibujo"
+            android:layout_margin="5sp"
+
+            />
+        <ImageButton
+            android:id="@+id/calendar"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#ffffff"
+            android:text="button2"
+            android:textSize="18sp"
+            app:srcCompat="@drawable/calendarlist_1032"
+            android:layout_margin="5sp"
+
+            />
+
+
+
+
+    </GridLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

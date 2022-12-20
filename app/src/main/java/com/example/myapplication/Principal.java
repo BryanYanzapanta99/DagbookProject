@@ -1,17 +1,13 @@
 package com.example.myapplication;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -33,7 +29,7 @@ public class Principal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
 
-        userPass = findViewById(R.id.userpass_txt);
+        userPass = findViewById(R.id.username);
         String user = getIntent().getStringExtra("username");
         userPass.setText(user);
 
@@ -56,7 +52,7 @@ public class Principal extends AppCompatActivity {
             }
         });
         /*recibo datos google*/
-        name = findViewById(R.id.userpass_txt);
+        name = findViewById(R.id.username);
         signOutbtn = findViewById(R.id.signout);
 
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
