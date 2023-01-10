@@ -66,7 +66,7 @@
 
         <ImageButton
             android:id="@+id/btn_contact"
-            android:layout_height="102dp"
+            android:layout_height="80dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
@@ -76,27 +76,24 @@
 
         <ImageButton
             android:id="@+id/btn_dibujo"
-            android:layout_height="104dp"
+            android:layout_height="wrap_content"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
             android:layout_margin="5sp"
             android:background="#ffffff"
-
-            app:srcCompat="@drawable/dibujo" />
+            app:srcCompat="@drawable/checklist_117966" />
 
         <ImageButton
-            android:id="@+id/calendar"
-            android:layout_height="113dp"
+            android:id="@+id/btn_notas"
+            android:layout_height="wrap_content"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
             android:layout_margin="5sp"
             android:background="#ffffff"
             android:text="button2"
-            android:textSize="18sp"
-
-            app:srcCompat="@drawable/calendarlist_1032" />
+            app:srcCompat="@drawable/folder_blue_scheduled_tasks_10978" />
 
 
 

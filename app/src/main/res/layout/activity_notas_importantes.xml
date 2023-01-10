@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".NotasImportantes">
+
+
+    <EditText
+        android:id="@+id/edNota"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:gravity="left"
+        android:inputType="text|textMultiLine"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/enviar_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_txt" />
+
+    <Button
+        android:id="@+id/btNotificacion"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_weight="1"
+        android:backgroundTint="#00BCD4"
+        android:text="Dejar Recordatorio" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="120dp"
+        android:layout_height="239dp"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/dibujo" />
+
+</LinearLayout>

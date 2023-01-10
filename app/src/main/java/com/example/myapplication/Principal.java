@@ -20,6 +20,7 @@ public class Principal extends AppCompatActivity {
     TextView userPass, name;
     ImageButton btnTask;
     ImageButton btnContact;
+    ImageButton btnNotas;
     GoogleSignInOptions gso;
     GoogleSignInClient gsc;
     Button signOutbtn;
@@ -35,6 +36,7 @@ public class Principal extends AppCompatActivity {
 
         btnTask = findViewById(R.id.btn_task);
         btnContact = findViewById(R.id.btn_contact);
+        btnNotas= findViewById(R.id.btn_notas);
 
         btnTask.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +50,13 @@ public class Principal extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Principal.this, Contacts.class);
+                startActivity(intent);
+            }
+        });
+        btnNotas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Principal.this, NotasImportantes.class);
                 startActivity(intent);
             }
         });
