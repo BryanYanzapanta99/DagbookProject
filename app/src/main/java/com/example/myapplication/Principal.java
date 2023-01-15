@@ -1,13 +1,18 @@
 package com.example.myapplication;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -16,6 +21,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 
 public class Principal extends AppCompatActivity {
+
 
     TextView userPass, name;
     ImageButton btnTask;
@@ -90,6 +96,24 @@ public class Principal extends AppCompatActivity {
                startActivity(new Intent(Principal.this, MainActivity.class));
             }
         });
+    }
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.overflow, menu);
+        return true;
+    }
+    public boolean onOptionsItemSelected(MenuItem item){
+        int id = item.getItemId();
+
+        if(id == androidx.core.R.id.item1){
+            Toast.makeText(this,"Se mostrara el evento", Toast.LENGTH_SHORT).show();
+        }else if(id == androidx.core.R.id.item2){
+            Toast.makeText(this,"Ayuda", Toast.LENGTH_SHORT).show();
+        }else if (id == androidx.core.R.id.item3){
+            Toast.makeText(this,"Info", Toast.LENGTH_SHORT).show();
+
+
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

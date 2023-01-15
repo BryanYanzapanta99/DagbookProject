@@ -50,7 +50,7 @@ public class NotasImportantes extends AppCompatActivity {
     private void createNotification(){
         NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), CHANNEL_ID);
         builder.setSmallIcon(R.drawable.dibujo);
-        builder.setContentTitle("Recordatorio del Dia");
+        builder.setContentTitle("Recordatorio del Evento");
         builder.setContentText(nota.getText());
         builder.setColor(Color.BLUE);
         builder.setPriority(NotificationCompat.PRIORITY_DEFAULT);
